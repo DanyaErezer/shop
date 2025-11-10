@@ -30,7 +30,16 @@
                     <a class="nav-link" href="{{ url('/') }}">Главная</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('admin.products.index') }}">Админка</a>
+                    <a class="nav-link" href="{{ url('/') }}">Новинки</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/') }}">Доставка</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/') }}">О нас</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/') }}">Контакты</a>
                 </li>
             </ul>
 
