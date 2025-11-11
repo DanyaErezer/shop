@@ -25,6 +25,7 @@
                 <table class="table table-striped table-hover">
                     <thead class="table-dark">
                     <tr>
+                        <th>Изображение</th>
                         <th>ID</th>
                         <th>Название</th>
                         <th>Цена</th>
@@ -36,6 +37,16 @@
                     <tbody>
                     @forelse($products as $product)
                         <tr>
+                            <td>
+                                @if($product->image)
+                                    <img src="/{{ $product->image }}" alt="{{ $product->name }}"
+                                         style="width: 50px; height: 50px; object-fit: cover;" class="img-thumbnail">
+                                @else
+                                    <div class="text-muted" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; background: #f8f9fa;">
+                                        <i class="fas fa-image"></i>
+                                    </div>
+                                @endif
+                            </td>
                             <td>{{ $product->id }}</td>
                             <td>{{ $product->name }}</td>
                             <td>{{ number_format($product->price, 2) }} руб.</td>
@@ -68,7 +79,7 @@
                         </tr>
                     @empty
                         <tr>
-                            <td colspan="6" class="text-center text-muted py-4">
+                            <td colspan="7" class="text-center text-muted py-4">
                                 <i class="fas fa-box-open fa-2x mb-3"></i>
                                 <p>Товары не найдены</p>
                                 <a href="{{ route('admin.products.create') }}" class="btn btn-primary">
