@@ -1,0 +1,23 @@
+.gender-section {
+    transition: all 0.5s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.gender-section:hover {
+    transform: scale(1.01);
+}
+
+.btn-outline-warning:hover {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    color: #000;
+}
+
+.feature-icon {
+    transition: transform 0.3s ease;
+}
+
+.feature-icon:hover {
+    transform: scale(1.1);
+}

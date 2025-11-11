@@ -7,7 +7,7 @@
         <div class="col-12">
             <div class="jumbotron bg-light p-5 rounded">
                 <h1 class="display-4">Добро пожаловать в My Shop!</h1>
-                <p class="lead">Это ваш будущий интернет-магазин. Начните добавлять товары через админ-панель.</p>
+                <p class="lead">Начните добавлять товары через админ-панель.</p>
                 <hr class="my-4">
 
                 @auth

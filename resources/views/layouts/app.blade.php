@@ -10,7 +10,11 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    @stack('styles')
+    <!-- Подключаем общие стили -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <!-- Дополнительные стили для конкретных страниц -->
+    @yield('styles')
 </head>
 <body>
 <!-- Навигация -->
@@ -29,18 +33,26 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('/') }}">Главная</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/') }}">Новинки</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/') }}">Доставка</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/') }}">О нас</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/') }}">Контакты</a>
-                </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/') }}">Новинки</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/') }}">Доставка</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/') }}">О нас</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/') }}">Контакты</a>
+                    </li>
+                @auth
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('admin.dashboard') }}">Панель управления</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('admin.products.index') }}">Товары</a>
+                    </li>
+                @endauth
             </ul>
 
             <ul class="navbar-nav">
@@ -115,6 +127,10 @@
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
-@stack('scripts')
+<!-- Общие скрипты -->
+<script src="{{ asset('js/app.js') }}"></script>
+
+<!-- Дополнительные скрипты для конкретных страниц -->
+@yield('scripts')
 </body>
 </html>
