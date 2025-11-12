@@ -7,6 +7,7 @@ use App\Http\Controllers\HomeController;
 
 // Публичная часть
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/about', [HomeController::class, 'about'])->name('about');
 
 // Аутентификация
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');

@@ -40,7 +40,7 @@
                         <a class="nav-link" href="{{ url('/') }}">Доставка</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/') }}">О нас</a>
+                        <a class="nav-link" href="{{ route('about') }}">О нас</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('/') }}">Контакты</a>

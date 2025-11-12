@@ -1,0 +1,23 @@
+.about-image-placeholder {
+    transition: transform 0.3s ease;
+}
+
+.about-image-placeholder:hover {
+    transform: translateY(-5px);
+}
+
+.value-icon {
+    transition: transform 0.3s ease;
+}
+
+.card:hover .value-icon {
+    transform: scale(1.1);
+}
+
+.shadow-sm {
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
