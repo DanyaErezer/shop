@@ -29,7 +29,7 @@
                 <div class="product-gallery">
                     <!-- Главное изображение -->
                     <div class="main-image mb-3">
-                        <img src="/{{ $product->image }}" alt="{{ $product->name }}"
+                        <img src="{{ Storage::url($product->image) }}" alt="{{ $product->name }}"
                              class="img-fluid rounded-3" id="mainImage">
                     </div>
 
@@ -39,9 +39,9 @@
                             <div class="row g-2">
                                 @foreach($product->gallery as $thumb)
                                     <div class="col-3">
-                                        <img src="/{{ $thumb }}" alt="{{ $product->name }}"
+                                        <img src="{{ Storage::url($thumb) }}" alt="{{ $product->name }}"
                                              class="img-thumbnail gallery-thumb"
-                                             data-image="/{{ $thumb }}">
+                                             data-image="{{ Storage::url($thumb) }}">
                                     </div>
                                 @endforeach
                             </div>

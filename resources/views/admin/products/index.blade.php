@@ -39,7 +39,7 @@
                         <tr>
                             <td>
                                 @if($product->image)
-                                    <img src="/{{ $product->image }}" alt="{{ $product->name }}"
+                                    <img src="{{ Storage::url($product->image) }}" alt="{{ $product->name }}"
                                          style="width: 50px; height: 50px; object-fit: cover;" class="img-thumbnail">
                                 @else
                                     <div class="text-muted" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; background: #f8f9fa;">
