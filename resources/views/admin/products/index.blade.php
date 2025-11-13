@@ -64,6 +64,10 @@
                                        class="btn btn-warning" title="Редактировать">
                                         <i class="fas fa-edit"></i>
                                     </a>
+                                    <a href="{{ route('products.show', $product->slug) }}"
+                                       class="btn btn-info" title="Просмотр" target="_blank">
+                                        <i class="fas fa-eye"></i> <!-- Правильная иконка -->
+                                    </a>
                                     <form action="{{ route('admin.products.destroy', $product) }}"
                                           method="POST" class="d-inline">
                                         @csrf

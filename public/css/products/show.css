@@ -1,0 +1,23 @@
+.gallery-thumb {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.gallery-thumb:hover {
+    transform: scale(1.05);
+    border-color: #007bff !important;
+}
+
+.main-image img {
+    transition: opacity 0.3s ease;
+}
+
+.product-title {
+    color: #333;
+    font-weight: 700;
+}
+
+.product-features li {
+    padding: 0.25rem 0;
+    border-bottom: 1px solid #f0f0f0;
+}

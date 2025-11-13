@@ -76,6 +76,48 @@
                                 <label class="form-check-label" for="is_active">Товар активен</label>
                             </div>
 
+                            <!-- Поле категории -->
+                            <div class="mb-3">
+                                <label for="category" class="form-label">Категория</label>
+                                <input type="text" class="form-control @error('category') is-invalid @enderror"
+                                       id="category" name="category" value="{{ old('category') }}"
+                                       placeholder="Мужская одежда, Женская одежда, Обувь и т.д.">
+                                @error('category')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
+                            </div>
+
+                            <!-- Поле загрузки главного изображения -->
+                            <div class="mb-3">
+                                <label for="image" class="form-label">Главное изображение</label>
+                                <input type="file" class="form-control @error('image') is-invalid @enderror"
+                                       id="image" name="image" accept="image/*">
+                                @error('image')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
+                            </div>
+
+                            <!-- Поле загрузки галереи -->
+                            <div class="mb-3">
+                                <label for="gallery" class="form-label">Галерея изображений</label>
+                                <input type="file" class="form-control @error('gallery') is-invalid @enderror"
+                                       id="gallery" name="gallery[]" multiple accept="image/*">
+                                @error('gallery')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
+                            </div>
+
+                            <!-- Поле характеристик -->
+                            <div class="mb-3">
+                                <label for="features" class="form-label">Характеристики (JSON)</label>
+                                <textarea class="form-control @error('features') is-invalid @enderror"
+                                          id="features" name="features" rows="3"
+                                          placeholder='{"Цвет": "черный", "Размер": "M", "Материал": "хлопок 100%"}'>{{ old('features') }}</textarea>
+                                @error('features')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
+                            </div>
+
                             <div class="d-flex gap-2">
                                 <button type="submit" class="btn btn-primary">
                                     <i class="fas fa-save"></i> Создать товар
